@@ -1,0 +1,24 @@
+/************************** IMPORT VARIABLES **************************/
+@use "variables" as *;
+
+// MEDIA QUERY STARTS HERE
+@media only screen and (min-width: $break-point) {
+
+    header,
+    main,
+    nav,
+    footer {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+/************************** HERO LAYOUT **************************/
+.hero {
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 0 $gutter;
+@include img-shadow-1;
+}
+
+
+} // end media query
