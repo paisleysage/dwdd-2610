@@ -8,7 +8,7 @@
     main,
     nav,
     footer {
-        max-width: 1200px;
+       
         margin: 0 auto;
     }
 
@@ -19,6 +19,35 @@
     margin: 0 $gutter;
 @include img-shadow-1;
 }
+
+
+/************************** BOTTOM **************************/
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  .address {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+
+}
+
+
+
+
+
+
 
 
 } // end media query

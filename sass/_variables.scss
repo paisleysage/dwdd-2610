@@ -40,7 +40,12 @@ $color-trans-b80: rgba(0, 0, 0, 0.8);
 $color-trans-b90: rgba(0, 0, 0, 0.9);
 
 // Font family stuff
-$font-family: "Playfair Display", serif;;
+$display-font-family: "Playfair Display", serif;
+$font-weight-thin: 400;
+$font-weight-normal: 600;
+$font-weight-heavy: 900;
+
+$body-font-family: "Fira Sans", sans-serif;
 $font-weight-thin: 400;
 $font-weight-normal: 600;
 $font-weight-heavy: 900;

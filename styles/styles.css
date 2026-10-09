@@ -333,11 +333,12 @@ template {
 
 /************************** NAVIGATION **************************/
 .site-nav {
-  margin: 0;
+  margin: 0 0 1.5rem;
   padding: 0;
   list-style-type: none;
   font-family: Verdana;
   background-color: lab(98% 0 0);
+  border-bottom: 1px solid lab(91 0 0);
   display: none;
 }
 
@@ -389,64 +390,120 @@ template {
 }
 
 /************************** BODY **************************/
-body {
-  font-family: "Playfair Display", serif;
-  margin: 0;
-  padding: 0;
-}
-
 /************************** HEADER **************************/
 header {
-  padding: 12px 0 12px 12px;
   display: grid;
-  grid-template-columns: 24px auto 44px;
+  grid-template-columns: 40px auto 44px;
   column-gap: 8px;
   align-items: end;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 5px;
+  padding-bottom: 5px;
 }
 header img {
   display: block;
   width: 100%;
   height: auto;
-  padding-bottom: 5px;
 }
 header span {
-  font-size: 1.2rem;
-  color: lab(15% 0 0);
+  font-size: 2rem;
+  color: #5B4B3A;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
 }
 
 /************************** MAIN LAYOUT **************************/
-h1 {
-  font-size: 1.5rem;
-  color: lab(34% 0 0);
-  font-weight: 900;
-  margin-left: 12px;
+main {
+  padding: 1.2rem;
+}
+main h1 {
+  font-family: "Playfair Display", serif;
+  color: #4F7C82;
+  margin: 0;
+  padding: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+main h2 {
+  font-family: "Playfair Display", serif;
+  color: #0F4C5C;
+  margin: 0;
+  padding: 0;
+  padding-top: 1rem;
+  padding-bottom: 0.8rem;
+}
+main h3 {
+  font-family: "Playfair Display", serif;
+  color: #0F4C5C;
+  margin: 0;
+  padding: 0;
+  padding-top: 1rem;
+  padding-bottom: 0.8rem;
+}
+main p {
+  font-family: "Fira Sans", sans-serif;
+  margin: 2rem;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0.6rem;
+}
+main ul {
+  font-family: "Fira Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0.6rem;
+  padding-left: 1.6rem;
 }
 
-/************************** HERO SECTION **************************/
-.hero {
-  position: relative;
+/************************** BOTTOM **************************/
+.bottom {
+  display: flex;
+  flex-direction: column;
+  background-color: #EFE6D8;
 }
-.hero img {
-  display: block;
-  width: 100%;
-  height: auto;
+.bottom h3 {
+  font-family: "Playfair Display", serif;
+  color: #0F4C5C;
+  margin: 0;
+  padding: 0;
+  padding-top: 1rem;
+  padding-bottom: 0.8rem;
 }
-.hero span {
-  position: absolute;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.7);
-  width: 100%;
-  padding: 0.8rem;
-  font-weight: 900;
-  font-size: clamp(1.2rem, 6vw, 3rem);
+.bottom p {
+  font-family: "Fira Sans", sans-serif;
+  margin: 2rem;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0.6rem;
+}
+.bottom a {
+  font-family: "Fira Sans", sans-serif;
+  margin: 2rem;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0.6rem;
+  color: #5B4B3A;
+}
+.bottom .address {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.bottom .contact {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 /************************** SOCIAL MEDIA **************************/
 .social {
+  text-align: center;
+}
+.social .icons {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  column-gap: 5px;
+  row-gap: 5px;
   margin-bottom: 1rem;
 }
 .social img {
@@ -470,7 +527,7 @@ h1 {
 
 /************************** FOOTER **************************/
 footer {
-  background-color: lab(15% 0 0);
+  background-color: #5B4B3A;
   color: lab(98% 0 0);
   text-align: center;
   padding: 1rem 0;
@@ -487,7 +544,6 @@ footer p {
   main,
   nav,
   footer {
-    max-width: 1200px;
     margin: 0 auto;
   }
   /************************** HERO LAYOUT **************************/
@@ -499,4 +555,23 @@ footer p {
     border: solid 1px lab(85% 0 0);
     box-shadow: 1px 1px 6px lab(85% 0 0);
   }
+  /************************** BOTTOM **************************/
+  .bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .bottom .address {
+    display: flex;
+    flex-direction: column;
+  }
+  .bottom .contact {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+ul li::marker {
+  content: "\2605  ";
+  color: #4F7C82;
 }
