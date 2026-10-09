@@ -39,6 +39,10 @@
 }
 
 // Style the Anchors
+.site-nav li::marker {
+  content: none;
+}
+
 .site-nav a {
   display: block;
   text-decoration: none;
